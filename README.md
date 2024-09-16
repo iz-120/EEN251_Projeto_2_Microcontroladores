@@ -1,4 +1,4 @@
-# (EEN251) Projeto 2 - Hub de temperatuara e umidade
+# (EEN251) Projeto 2 - Hub de temperatura e umidade
 Documentação e códigos desenvolvidos para o segundo projeto da disciplina EEN251 - Microcontroladores e Sistemas Embarcados
 
 ## Grupo
@@ -7,13 +7,13 @@ Izabel Sampaio Goes P. Lapa - RA: 21.00098-0
 Júlia Galhardi Cerqueira - RA: 21.01997-5
 
 ## Descrição do Projeto
-O tema escolhido para o projeto será a criação e implmentação de um hub usando microcontrolador e prefidéricos.
+O tema escolhido para o projeto será a criação e implmentação de um hub usando mini computador e periféricos.
 
 ## Requisitos do Sistema
 ![Tabela de Requisitos](/imagens/Tabela_Requisitos.png "Tabela de Requisitos do Sistema Proposto")
 
 ## Diagrama de Blocos do Sistema
-Tem-se a seguir o Diagrama de Blocos, com o microcontrolador e os periféricos utilizados. As setas indiram se o fluxo de dados é de *input* ou *output*.
+Tem-se a seguir o Diagrama de Blocos, com o mini computador e os periféricos utilizados. As setas indicam se o fluxo de dados é de *input* ou *output*.
 
 ![Diagrama de Blocos](/imagens/Diagrama_Blocos.png "Primeira versão do Diagrama de Blocos do Sistema")
 
