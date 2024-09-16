@@ -37,7 +37,7 @@ Essa seção irá abordar em mais detalhes as conexões de cada componente e os 
 O desenvolvimento do software foi feito através do Node Red, utilizando as bibliotecas específicas para conexão com o periférico DTH11 e a API do wheathermap.
 
 ## Imagens
-Aqui serão apresentadas imagens e vídeos do sistema em desenvolvimento e do produto final.
+Aqui serão apresentadas imagens do sistema no quesito desenvolvimento e do produto final.
 
 ![Programação no Node Red](/imagens/Programa_Node_Red.png "Visão geral da progreamação no Nore Red")
 
