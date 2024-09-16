@@ -15,7 +15,7 @@ O tema escolhido para o projeto será a criação e implmentação de um hub usa
 ## Diagrama de Blocos do Sistema
 Tem-se a seguir o Diagrama de Blocos, com o mini computador e os periféricos utilizados. As setas indicam se o fluxo de dados é de *input* ou *output*.
 
-![Diagrama de Blocos](/imagens/Diagrama_Blocos.png "Primeira versão do Diagrama de Blocos do Sistema")
+![Diagrama de Blocos](/imagens/Diagrama_de_Blocos.png "Primeira versão do Diagrama de Blocos do Sistema")
 
 ## Conexões
 Essa seção irá abordar em mais detalhes as conexões de cada componente e os pinos do microcontrolador Raspberry Pi Pico que estão sendo utilizados em cada uma delas.
