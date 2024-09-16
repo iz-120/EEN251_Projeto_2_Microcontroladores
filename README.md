@@ -7,7 +7,16 @@ Izabel Sampaio Goes P. Lapa - RA: 21.00098-0
 Júlia Galhardi Cerqueira - RA: 21.01997-5
 
 ## Descrição do Projeto
-O tema escolhido para o projeto será a criação e implmentação de um hub usando mini computador e periféricos.
+O tema escolhido para o projeto será a criação e implmentação de um hub usando mini computador e periféricos. A motivação para o projeto foi manter o ambiente com temperatura e umidade em faixas de valores determinados em valores ideais de vivência de ratos twister.
+
+As faixas ideais para eles são de 18°C a 26°C e de 50% a 70% de umidade do ar.
+
+Com isso em mente, o projeto aqui apresentado visa ser um hub que possa ser instalado no ambiente dos ratos e que monitore esses dois parâmetros, tanto interna quanto externamente para via de comparação.
+As medições internas são feitas através de um sensor de umidade e temperatura (DTH11) e as externas tem como fonte a API da Open Weather.
+
+Os valores de temperatura e umidade são exibidos em formato numérico e atualizados, para via de teste, a cada 10 segundos. Além disso, é feito um gráfico em tempo real com os valores de temperatura e umidade captados internamente e recebidos externamente.
+
+Caso os valores internos saiam da faixa ideal, é exibida mensagem avisando que a temperatura ou umidade estão abaixo ou acima dos valores ideais.
 
 ## Requisitos do Sistema
 ![Tabela de Requisitos](/imagens/Tabela_Requisitos.png "Tabela de Requisitos do Sistema Proposto")
