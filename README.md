@@ -54,3 +54,6 @@ Aqui serão apresentadas imagens do sistema no quesito desenvolvimento e do prod
 
 ![Tela Medições - Warning](/imagens/Tela_Medicoes_warning.png "Tela de Medições com warning")
 
+## Vídeo de apresentação
+Segue link do vídeo de apresentação do projeto: [Apresentação T2](https://youtu.be/OLLFZQJT4Pk)
+
