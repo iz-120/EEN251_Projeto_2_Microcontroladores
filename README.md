@@ -1,4 +1,4 @@
-# (EEN251) Projeto 2 - Hub de temperatura e umidade
+# (EEN251) Projeto 2 e 3 - Hub de temperatura e umidade
 Documentação e códigos desenvolvidos para o segundo projeto da disciplina EEN251 - Microcontroladores e Sistemas Embarcados
 
 ## Grupo
@@ -17,6 +17,8 @@ As medições internas são feitas através de um sensor de umidade e temperatur
 Os valores de temperatura e umidade são exibidos em formato numérico e atualizados, para via de teste, a cada 10 segundos. Além disso, é feito um gráfico em tempo real com os valores de temperatura e umidade captados internamente e recebidos externamente.
 
 Caso os valores internos saiam da faixa ideal, é exibida mensagem avisando que a temperatura ou umidade estão abaixo ou acima dos valores ideais.
+
+Em uma segunda iteração e continuação deste projeto, foi feito a integração deste hub com um dashboard online no Ubidots, sobra a qual serão dados mais detalhes abaixo.
 
 ## Requisitos do Sistema
 ![Tabela de Requisitos](/imagens/Tabela_Requisitos.png "Tabela de Requisitos do Sistema Proposto")
@@ -42,10 +44,10 @@ Essa seção irá abordar em mais detalhes as conexões de cada componente e os 
 > - GND (Pino 9)
 > - GPIO15 (Pino 10)
 
-## Desenvolvimento
+## Desenvolvimento do projeto 2
 O desenvolvimento do software foi feito através do Node Red, utilizando as bibliotecas específicas para conexão com o periférico DTH11 e a API do wheathermap.
 
-## Imagens
+## Imagens do projeto 2
 Aqui serão apresentadas imagens do sistema no quesito desenvolvimento e do produto final.
 
 ![Programação no Node Red](/imagens/Programa_Node_Red.png "Visão geral da progreamação no Nore Red")
@@ -54,6 +56,6 @@ Aqui serão apresentadas imagens do sistema no quesito desenvolvimento e do prod
 
 ![Tela Medições - Warning](/imagens/Tela_Medicoes_warning.png "Tela de Medições com warning")
 
-## Vídeo de apresentação
+## Vídeos de apresentação
 Segue link do vídeo de apresentação do projeto: [Apresentação T2](https://youtu.be/OLLFZQJT4Pk)
 
