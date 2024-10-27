@@ -1,0 +1,1507 @@
+[
+    {
+        "id": "a24b8454e57b93dd",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2bc45a8faba78c27",
+        "type": "rpi-dht22",
+        "z": "a24b8454e57b93dd",
+        "name": "",
+        "topic": "rpi-dht11",
+        "dht": "11",
+        "pintype": "0",
+        "pin": "15",
+        "x": 300,
+        "y": 780,
+        "wires": [
+            [
+                "605f7a2ab578d38a",
+                "7ad765b272db3329",
+                "cc3c6d4f95dd38d9",
+                "3f6a15441527e2d5",
+                "fd1e1094553e2bd6"
+            ]
+        ]
+    },
+    {
+        "id": "3c4e9bc00bbea70e",
+        "type": "inject",
+        "z": "a24b8454e57b93dd",
+        "name": "Timestamp",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 820,
+        "wires": [
+            [
+                "2bc45a8faba78c27",
+                "29604cf06804f2f6",
+                "6048bab86d918894",
+                "7a751f6fe4ac1f2d"
+            ]
+        ]
+    },
+    {
+        "id": "7ad765b272db3329",
+        "type": "ui_text",
+        "z": "a24b8454e57b93dd",
+        "group": "4c88f515b97a7456",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Temp txt",
+        "label": "Temperatura:",
+        "format": "{{msg.payload + \"°C\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 480,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5dbe4760298837eb",
+        "type": "ui_text",
+        "z": "a24b8454e57b93dd",
+        "group": "4c88f515b97a7456",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Humid txt",
+        "label": "Umidade:",
+        "format": "{{msg.payload + \"%\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 740,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "cc3c6d4f95dd38d9",
+        "type": "ui_chart",
+        "z": "a24b8454e57b93dd",
+        "name": "Temp chart",
+        "group": "4c88f515b97a7456",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura interna",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5206773f630fdde5",
+        "type": "ui_chart",
+        "z": "a24b8454e57b93dd",
+        "name": "Humid chart",
+        "group": "4c88f515b97a7456",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Umidade interna",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f1d64460070cebf6",
+        "type": "ui_text",
+        "z": "a24b8454e57b93dd",
+        "group": "d9b4e18b0bc8a7a7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Temp txt",
+        "label": "Temperatura:",
+        "format": "{{msg.payload.tempc + \"°C\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 360,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "e69dddd2ee8a528a",
+        "type": "ui_chart",
+        "z": "a24b8454e57b93dd",
+        "name": "Temp chart",
+        "group": "d9b4e18b0bc8a7a7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura externa",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 510,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "90e6ce755fbab91b",
+        "type": "ui_chart",
+        "z": "a24b8454e57b93dd",
+        "name": "Humid chart",
+        "group": "d9b4e18b0bc8a7a7",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Umidade externa",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 510,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29dbb7c8197fbf52",
+        "type": "ui_text",
+        "z": "a24b8454e57b93dd",
+        "group": "d9b4e18b0bc8a7a7",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Humid txt",
+        "label": "Umidade:",
+        "format": "{{msg.payload.humidity + \"%\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 320,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "131514e965f52f9f",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "Umidade",
+        "func": "\nmsg.payload = msg.payload.humidity;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 1040,
+        "wires": [
+            [
+                "90e6ce755fbab91b"
+            ]
+        ]
+    },
+    {
+        "id": "0f2a74763989d099",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "Temperatura",
+        "func": "\nmsg.payload = msg.payload.tempc;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 980,
+        "wires": [
+            [
+                "e69dddd2ee8a528a"
+            ]
+        ]
+    },
+    {
+        "id": "43cefe310ea64923",
+        "type": "ui_toast",
+        "z": "a24b8454e57b93dd",
+        "position": "top right",
+        "displayTime": "4",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "Low humidity warning",
+        "x": 1160,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "d4e44e295ab09c8f",
+        "type": "switch",
+        "z": "a24b8454e57b93dd",
+        "name": "Low humidity check",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "50",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 780,
+        "wires": [
+            [
+                "b0a9b6aab6a5fead"
+            ]
+        ]
+    },
+    {
+        "id": "ead6342033fb792e",
+        "type": "switch",
+        "z": "a24b8454e57b93dd",
+        "name": "High humidity check",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "70",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 720,
+        "y": 840,
+        "wires": [
+            [
+                "e3a959a72fe16230"
+            ]
+        ]
+    },
+    {
+        "id": "4b93c904f2010fb3",
+        "type": "ui_toast",
+        "z": "a24b8454e57b93dd",
+        "position": "top right",
+        "displayTime": "4",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "High humidity warning",
+        "x": 1160,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b0a9b6aab6a5fead",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "Write warning",
+        "func": "msg.topic = \"Umidade: \" + msg.payload + \"%\"\nmsg.payload = \"Umidade interna abaixo do ideal\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 780,
+        "wires": [
+            [
+                "43cefe310ea64923"
+            ]
+        ]
+    },
+    {
+        "id": "e3a959a72fe16230",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "Write warning",
+        "func": "msg.topic = \"Umidade: \" + msg.payload + \"%\"\nmsg.payload = \"Umidade interna acima do ideal\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 840,
+        "wires": [
+            [
+                "4b93c904f2010fb3"
+            ]
+        ]
+    },
+    {
+        "id": "29604cf06804f2f6",
+        "type": "openweathermap",
+        "z": "a24b8454e57b93dd",
+        "name": "External data",
+        "wtype": "current",
+        "lon": "-46.573008",
+        "lat": "-23.648415",
+        "city": "",
+        "country": "",
+        "language": "pt",
+        "x": 130,
+        "y": 940,
+        "wires": [
+            [
+                "f1d64460070cebf6",
+                "0f2a74763989d099",
+                "131514e965f52f9f",
+                "29dbb7c8197fbf52",
+                "7e4b83d909057b8f",
+                "81faf856cc05952e"
+            ]
+        ]
+    },
+    {
+        "id": "7e4b83d909057b8f",
+        "type": "debug",
+        "z": "a24b8454e57b93dd",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "605f7a2ab578d38a",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "Umidade",
+        "func": "\nmsg.payload = msg.humidity;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 880,
+        "wires": [
+            [
+                "5dbe4760298837eb",
+                "5206773f630fdde5",
+                "7e4b83d909057b8f"
+            ]
+        ]
+    },
+    {
+        "id": "85ffc87b133f5c06",
+        "type": "switch",
+        "z": "a24b8454e57b93dd",
+        "name": "Low temperature check",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "18",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 620,
+        "wires": [
+            [
+                "dcc0d85c2aa99301"
+            ]
+        ]
+    },
+    {
+        "id": "fd40c06b8e37a696",
+        "type": "switch",
+        "z": "a24b8454e57b93dd",
+        "name": "High temperature check",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "26",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 680,
+        "wires": [
+            [
+                "0a51682895a4babd"
+            ]
+        ]
+    },
+    {
+        "id": "dcc0d85c2aa99301",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "Write warning",
+        "func": "msg.topic = \"Temperatura: \" + msg.payload + \"°C\"\nmsg.payload = \"Temperatura interna abaixo do ideal\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 620,
+        "wires": [
+            [
+                "f8e0a3b2658f77fa"
+            ]
+        ]
+    },
+    {
+        "id": "0a51682895a4babd",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "Write warning",
+        "func": "msg.topic = \"Temperatura: \" + msg.payload + \"°C\"\nmsg.payload = \"Temperatura interna acima do ideal\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 680,
+        "wires": [
+            [
+                "e8af2d645c31776a"
+            ]
+        ]
+    },
+    {
+        "id": "f8e0a3b2658f77fa",
+        "type": "ui_toast",
+        "z": "a24b8454e57b93dd",
+        "position": "top left",
+        "displayTime": "4",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "Low temperature warning",
+        "x": 1150,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e8af2d645c31776a",
+        "type": "ui_toast",
+        "z": "a24b8454e57b93dd",
+        "position": "top left",
+        "displayTime": "4",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "High temperature warning",
+        "x": 1150,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ae59353accd62891",
+        "type": "change",
+        "z": "a24b8454e57b93dd",
+        "name": "POST - Ubidots",
+        "rules": [
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "post",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://things.ubidots.com/api/v1.6/devices/dispositivo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.X-Auth-Token",
+                "pt": "msg",
+                "to": "BBUS-d1eq7PaPp167eLLHgtu29liqlakwNH",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 1260,
+        "wires": [
+            [
+                "1e6923eb500b51b5"
+            ]
+        ]
+    },
+    {
+        "id": "1e6923eb500b51b5",
+        "type": "http request",
+        "z": "a24b8454e57b93dd",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 680,
+        "y": 1260,
+        "wires": [
+            [
+                "b1a78676277646b4"
+            ]
+        ]
+    },
+    {
+        "id": "3f6a15441527e2d5",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "req_JSON_interno",
+        "func": "msg.payload =\n{\n   \"temperatura-interna\": {\n    \"value\": msg.payload\n   },\n   \"umidade-interna\": {\n    \"value\": msg.humidity\n   } \n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1260,
+        "wires": [
+            [
+                "ae59353accd62891"
+            ]
+        ]
+    },
+    {
+        "id": "b1a78676277646b4",
+        "type": "debug",
+        "z": "a24b8454e57b93dd",
+        "name": "POST_response",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "fd1e1094553e2bd6",
+        "type": "debug",
+        "z": "a24b8454e57b93dd",
+        "name": "DHT11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "81faf856cc05952e",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "req_JSON_externo",
+        "func": "msg.payload =\n{\n    \"temperatura-externa\": {\n        \"value\": msg.payload.tempc\n    },\n    \"umidade-externa\": {\n        \"value\": msg.payload.humidity\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1340,
+        "wires": [
+            [
+                "0dda21b4b6664c95"
+            ]
+        ]
+    },
+    {
+        "id": "0dda21b4b6664c95",
+        "type": "change",
+        "z": "a24b8454e57b93dd",
+        "name": "POST - Ubidots",
+        "rules": [
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "post",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://things.ubidots.com/api/v1.6/devices/dispositivo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.X-Auth-Token",
+                "pt": "msg",
+                "to": "BBUS-d1eq7PaPp167eLLHgtu29liqlakwNH",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 1340,
+        "wires": [
+            [
+                "1e6923eb500b51b5"
+            ]
+        ]
+    },
+    {
+        "id": "6048bab86d918894",
+        "type": "change",
+        "z": "a24b8454e57b93dd",
+        "name": "GET - Ubidots - bTemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "get",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://things.ubidots.com/api/v1.6/devices/dispositivo/ajusta-temperatura/lv",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.X-Auth-Token",
+                "pt": "msg",
+                "to": "BBUS-d1eq7PaPp167eLLHgtu29liqlakwNH",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1420,
+        "wires": [
+            [
+                "b3a2a7b183ceb556"
+            ]
+        ]
+    },
+    {
+        "id": "7a751f6fe4ac1f2d",
+        "type": "change",
+        "z": "a24b8454e57b93dd",
+        "name": "GET - Ubidots - bHumid",
+        "rules": [
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "get",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://things.ubidots.com/api/v1.6/devices/dispositivo/ajusta-umidade/lv",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.X-Auth-Token",
+                "pt": "msg",
+                "to": "BBUS-d1eq7PaPp167eLLHgtu29liqlakwNH",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 1480,
+        "wires": [
+            [
+                "4a8adf681580b09b"
+            ]
+        ]
+    },
+    {
+        "id": "b3a2a7b183ceb556",
+        "type": "http request",
+        "z": "a24b8454e57b93dd",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 720,
+        "y": 1420,
+        "wires": [
+            [
+                "9fa4fb2467f431b1",
+                "c1699b215feeeb7f"
+            ]
+        ]
+    },
+    {
+        "id": "9fa4fb2467f431b1",
+        "type": "debug",
+        "z": "a24b8454e57b93dd",
+        "name": "GET_response",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "4a8adf681580b09b",
+        "type": "http request",
+        "z": "a24b8454e57b93dd",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 720,
+        "y": 1480,
+        "wires": [
+            [
+                "9fa4fb2467f431b1",
+                "7726498be74492ff"
+            ]
+        ]
+    },
+    {
+        "id": "47acabe7a0eb0e05",
+        "type": "ui_toast",
+        "z": "a24b8454e57b93dd",
+        "position": "dialog",
+        "displayTime": "",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Ajuste feito",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Ajustar temperatura",
+        "x": 1630,
+        "y": 1400,
+        "wires": [
+            [
+                "560c504e96f40581",
+                "6ac955197506b4d4"
+            ]
+        ]
+    },
+    {
+        "id": "d7af362df921f16f",
+        "type": "switch",
+        "z": "a24b8454e57b93dd",
+        "name": "Ajustar temp",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0.0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1400,
+        "wires": [
+            [
+                "125fb14a9c4f931c",
+                "c37c4634ae7bb16c"
+            ]
+        ]
+    },
+    {
+        "id": "125fb14a9c4f931c",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "function 1",
+        "func": "msg.topic = \"Ajuste a temperatura\"\nmsg.payload = \"O ajuste foi feito?\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 1400,
+        "wires": [
+            [
+                "47acabe7a0eb0e05"
+            ]
+        ]
+    },
+    {
+        "id": "0fcd438c20ce6303",
+        "type": "switch",
+        "z": "a24b8454e57b93dd",
+        "name": "Ajustar umid",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0.0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1210,
+        "y": 1480,
+        "wires": [
+            [
+                "fe8c52be0db55973"
+            ]
+        ]
+    },
+    {
+        "id": "fe8c52be0db55973",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "function 2",
+        "func": "msg.topic = \"Ajuste a umidade\"\nmsg.payload = \"O ajuste foi feito?\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 1480,
+        "wires": [
+            [
+                "88e7f21ecf1838be"
+            ]
+        ]
+    },
+    {
+        "id": "88e7f21ecf1838be",
+        "type": "ui_toast",
+        "z": "a24b8454e57b93dd",
+        "position": "dialog",
+        "displayTime": "",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Ajuste feito",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Ajustar umidade",
+        "x": 1600,
+        "y": 1480,
+        "wires": [
+            [
+                "bd3559b9259ec1f3"
+            ]
+        ]
+    },
+    {
+        "id": "c1699b215feeeb7f",
+        "type": "rbe",
+        "z": "a24b8454e57b93dd",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 990,
+        "y": 1400,
+        "wires": [
+            [
+                "d7af362df921f16f",
+                "7d4c667872ae609e"
+            ]
+        ]
+    },
+    {
+        "id": "7726498be74492ff",
+        "type": "rbe",
+        "z": "a24b8454e57b93dd",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 970,
+        "y": 1480,
+        "wires": [
+            [
+                "0fcd438c20ce6303"
+            ]
+        ]
+    },
+    {
+        "id": "7d4c667872ae609e",
+        "type": "debug",
+        "z": "a24b8454e57b93dd",
+        "name": "filtro temp",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "c37c4634ae7bb16c",
+        "type": "debug",
+        "z": "a24b8454e57b93dd",
+        "name": "ajuste temp",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "560c504e96f40581",
+        "type": "debug",
+        "z": "a24b8454e57b93dd",
+        "name": "ajuste feito",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1810,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "f80a33fefc3cd2e5",
+        "type": "change",
+        "z": "a24b8454e57b93dd",
+        "name": "POST - Ubidots",
+        "rules": [
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "post",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://things.ubidots.com/api/v1.6/devices/dispositivo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.X-Auth-Token",
+                "pt": "msg",
+                "to": "BBUS-d1eq7PaPp167eLLHgtu29liqlakwNH",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2080,
+        "y": 1400,
+        "wires": [
+            [
+                "b04d74a88c50d5e1"
+            ]
+        ]
+    },
+    {
+        "id": "b04d74a88c50d5e1",
+        "type": "http request",
+        "z": "a24b8454e57b93dd",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2320,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ac955197506b4d4",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "req_JSON_bTemp",
+        "func": "msg.payload =\n{\n    \"ajusta-temperatura\": {\n        \"value\": 1.0\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1870,
+        "y": 1400,
+        "wires": [
+            [
+                "f80a33fefc3cd2e5"
+            ]
+        ]
+    },
+    {
+        "id": "fa415befec8bf585",
+        "type": "change",
+        "z": "a24b8454e57b93dd",
+        "name": "POST - Ubidots",
+        "rules": [
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "post",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://things.ubidots.com/api/v1.6/devices/dispositivo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.X-Auth-Token",
+                "pt": "msg",
+                "to": "BBUS-d1eq7PaPp167eLLHgtu29liqlakwNH",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2080,
+        "y": 1480,
+        "wires": [
+            [
+                "125b51b81118d788"
+            ]
+        ]
+    },
+    {
+        "id": "125b51b81118d788",
+        "type": "http request",
+        "z": "a24b8454e57b93dd",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2320,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd3559b9259ec1f3",
+        "type": "function",
+        "z": "a24b8454e57b93dd",
+        "name": "req_JSON_bUmid",
+        "func": "msg.payload =\n{\n    \"ajusta-umidade\": {\n        \"value\": 1.0\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1870,
+        "y": 1480,
+        "wires": [
+            [
+                "fa415befec8bf585"
+            ]
+        ]
+    },
+    {
+        "id": "4c88f515b97a7456",
+        "type": "ui_group",
+        "name": "Medições internas",
+        "tab": "a2a8d73b2d076d6e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d9b4e18b0bc8a7a7",
+        "type": "ui_group",
+        "name": "Medições Externas",
+        "tab": "a2a8d73b2d076d6e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a2a8d73b2d076d6e",
+        "type": "ui_tab",
+        "name": "Medições",
+        "icon": "house",
+        "disabled": false,
+        "hidden": false
+    }
+]
