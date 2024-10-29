@@ -28,6 +28,10 @@ Tem-se a seguir o Diagrama de Blocos, com o mini computador e os periféricos ut
 
 ![Diagrama de Blocos](/imagens/Diagrama_de_Blocos.png "Primeira versão do Diagrama de Blocos do Sistema")
 
+Para a continuação do projeto, agora devemos considerar a interação entre o sistema anterior e o Ubidots. Através de requisições HTTP POST e GET, existe comunicação bidirecional, como pode ser visto no novo diagrama.
+
+![Novo Diagrama de Blocos](/imagens/Diagrama_de_Blocos_2.png "Segunda versão do Diagrama de Blocos do Sistema")
+
 ## Conexões
 Essa seção irá abordar em mais detalhes as conexões de cada componente e os pinos do microcontrolador Raspberry Pi Pico que estão sendo utilizados em cada uma delas.
 
@@ -44,18 +48,34 @@ Essa seção irá abordar em mais detalhes as conexões de cada componente e os 
 > - GND (Pino 9)
 > - GPIO15 (Pino 10)
 
-## Desenvolvimento do projeto 2
+## Desenvolvimento
 O desenvolvimento do software foi feito através do Node Red, utilizando as bibliotecas específicas para conexão com o periférico DTH11 e a API do wheathermap.
 
-## Imagens do projeto 2
+Na segunda iteração, foi utilizada a mesma aplicação desenvolvida anteriormente no Node Red, apenas fazendo as adições necessárias para atender ao comportamento desejado com o Ubidots. Foram utilizados nós de requisição HTTP para a comunicação com o Dashboard online. Agora, ao invés de apresentar *warnings* na tela (naquela na qual está conectado o Raspberry Pi) quando a temperatura ou umidade saem da faixa ideal, o Dashboard exibe a temperatura com faixas de cores indicativas do status:
+- Vermelho: temperatura acima do ideal;
+- Verde: temperatura na faixa ideal;
+- Azul: temperatura abaixo do ideal.
+
+Para a umidade, os limites ideais são mostrados como linhas tracejadas no gráfico.
+
+Além disso, caso o usuário do Dashboard perceba que a temperatura ou umidade estão fora da faixa, ele pode solicitar o ajuste delas através de botões, um para pedir o ajuste da temperatura e outro, para umidade. Ao pressionar o botão, uma mensagem é exibida na tela pedindo que o ajuste seja feito. Enquanto a pessoa do outro lado não confirma que o ajuste foi feito, o botão de solicitar ajuste fica desabilitado no Dashboard. Ao tocar em "Ajuste feito", o pop-up some e o botão do Dashboard volta a ficar habilitado.
+
+
+## Imagens
 Aqui serão apresentadas imagens do sistema no quesito desenvolvimento e do produto final.
+### Estrutura
+![Programação no Node Red](/imagens/Programa_Node_Red.png "Visão geral da programação no Nore Red")
 
-![Programação no Node Red](/imagens/Programa_Node_Red.png "Visão geral da progreamação no Nore Red")
-
+### Tela
 ![Tela Medições](/imagens/Tela_Medicoes.png "Tela de Medições")
 
+### Tela com warning
 ![Tela Medições - Warning](/imagens/Tela_Medicoes_warning.png "Tela de Medições com warning")
 
 ## Vídeos de apresentação
+### Projeto 2 - T2
 Segue link do vídeo de apresentação do projeto: [Apresentação T2](https://youtu.be/OLLFZQJT4Pk)
+
+### Projeto 3 - T3
+Segue link do vídeo de apresentação do projeto:
 
