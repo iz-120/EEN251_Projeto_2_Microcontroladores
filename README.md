@@ -92,5 +92,5 @@ Segue a estrutura da segunda iteração do projeto, com a implementação do Ubi
 Segue link do vídeo de apresentação do projeto: [Apresentação T2](https://youtu.be/OLLFZQJT4Pk)
 
 ### Projeto 3 - T3
-Segue link do vídeo de apresentação do projeto: [Apresentação T3]()
+Segue link do vídeo de apresentação do projeto: [Apresentação T3](https://youtu.be/KrUNZdIqVEY)
 
