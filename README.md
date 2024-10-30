@@ -64,7 +64,15 @@ Além disso, caso o usuário do Dashboard perceba que a temperatura ou umidade e
 ## Imagens
 Aqui serão apresentadas imagens do sistema no quesito desenvolvimento e do produto final.
 ### Estrutura
-![Programação no Node Red](/imagens/Programa_Node_Red.png "Visão geral da programação no Nore Red")
+Segue a estrutura da primeira iteração do projeto:
+![Programação no Node Red](/imagens/Programa_Node_Red.png "Visão geral da programação no Node Red")
+
+Segue a estrutura da segunda iteração do projeto, com a implementação do Ubidots:
+![Programação no Node Red 1](/imagens/Node_Red_1.png "Parte da programação do Node Red")
+
+![Programação no Node Red 2](/imagens/Node_Red_2.png "Parte da programação do Node Red 2")
+
+![Programação no Node Red 3](/imagens/Node_Red_3.png "Parte da programação do Node Red 3")
 
 ### Tela
 ![Tela Medições](/imagens/Tela_Medicoes.png "Tela de Medições")
@@ -72,10 +80,17 @@ Aqui serão apresentadas imagens do sistema no quesito desenvolvimento e do prod
 ### Tela com warning
 ![Tela Medições - Warning](/imagens/Tela_Medicoes_warning.png "Tela de Medições com warning")
 
+![Tela Medições - Aviso](/imagens/Tela_Medicoes_aviso.png "Tela de Medições com aviso")
+
+### Dashboard
+![Dashboard Temperatura e Umidade](/imagens/Dashboard_1.png "Dashboard Temperatura e Umidade")
+
+![Dashboard Temperatura e Umidade 2](imagens/Dashboard_2.png "Dashboard Temperatura e Umidade 2")
+
 ## Vídeos de apresentação
 ### Projeto 2 - T2
 Segue link do vídeo de apresentação do projeto: [Apresentação T2](https://youtu.be/OLLFZQJT4Pk)
 
 ### Projeto 3 - T3
-Segue link do vídeo de apresentação do projeto:
+Segue link do vídeo de apresentação do projeto: [Apresentação T3]()
 
