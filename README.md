@@ -80,7 +80,7 @@ Segue a estrutura da segunda iteração do projeto, com a implementação do Ubi
 ### Tela com warning
 ![Tela Medições - Warning](/imagens/Tela_Medicoes_warning.png "Tela de Medições com warning")
 
-![Tela Medições - Aviso](/imagens/Tela_Medicoes_aviso.png "Tela de Medições com aviso")
+![Tela Medições - Aviso](/imagens/Ajuste_Tela.png "Tela de Medições com aviso")
 
 ### Dashboard
 ![Dashboard Temperatura e Umidade](/imagens/Dashboard_1.png "Dashboard Temperatura e Umidade")
