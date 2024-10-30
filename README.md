@@ -87,6 +87,9 @@ Segue a estrutura da segunda iteração do projeto, com a implementação do Ubi
 
 ![Dashboard Temperatura e Umidade 2](imagens/Dashboard_2.png "Dashboard Temperatura e Umidade 2")
 
+## Acesso ao Dashboard
+Link para acessar o Dashboard online: [Dashboard - Temperatura e Umidade](https://stem.ubidots.com/app/dashboards/public/dashboard/Bx6z8xfUxvSB-yMucRAIL3TOdvn8L6BHumo7zo7sP6c?navbar=true&contextbar=false)
+
 ## Vídeos de apresentação
 ### Projeto 2 - T2
 Segue link do vídeo de apresentação do projeto: [Apresentação T2](https://youtu.be/OLLFZQJT4Pk)
